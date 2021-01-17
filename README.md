@@ -14,10 +14,16 @@ To use Covid Insight, follow these steps:
   2. Run **Application.py** in the terminal and people can start to recieve messages.
 
 ## How I built it 🔨
-The tools I used to complete this project is using Python for the back-end and ElectronJS framework for the front-end of this project. Also implemented Google's text to speech API to translate audio to text and Python's Natural Language Toolkit to process input from the user.
+I built this project using Python, python libraries and Machine Learning (specifically Linear Regression). Python was used to built the application and to write the scripts. Some python specific libraries I used were:
+  1. numpy
+  2. matplotlib
+  3. pandas
+  4. sklearn (using their Machine Learning Linear Regression model)
+  5. Flask
+  6. Twilio
 
 ## Challenges I ran into 🚧
-Major challenge I ran into at first was thinking of the approach because in the Batman series, he is one of the main people that helps Batman so thinking of a voice assistant that can replicate that would be tough.
+A major challenge I ran into when creating this project was learning about Machine Learning models and which one would be the best to measure the predictions for future cases in n amount of days.
 
 ## Accomplishments that I'm proud of 😄
 I am proud that I can say I made my voice assistance with a flair. Also, that I made a voice assistant for desktop users because we know not everyone likes Cortona. 😝
