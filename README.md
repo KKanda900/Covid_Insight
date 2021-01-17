@@ -10,7 +10,7 @@ Covid Insight is an application that has the incentive to keep people up to date
 To use Covid Insight, follow these steps:
   1. Clone this repository
   2. Setup Ngrok on your system
-    2a. When you setup Ngrok, go to the directory thats in your machine that has ngrok and run **./ngrok http <port forward number>** to start the server
+    2a. When you setup Ngrok, go to the directory thats in your machine that has ngrok and run **./ngrok http port number** to start the server
   2. Run **Application.py** in the terminal and people can start to recieve messages.
 
 ## How I built it 🔨
