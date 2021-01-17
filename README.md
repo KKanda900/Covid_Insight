@@ -26,4 +26,4 @@ I built this project using Python, python libraries and Machine Learning (specif
 A major challenge I ran into when creating this project was learning about Machine Learning models and which one would be the best to measure the predictions for future cases in n amount of days.
 
 ## Accomplishments that I'm proud of 😄
-I am proud that I can say I made my voice assistance with a flair. Also, that I made a voice assistant for desktop users because we know not everyone likes Cortona. 😝
+I am proud to say I learned some aspects of Machine Learning that I didn't learn before and be confident enough to apply it to other projects in the future where applicable. 🎓
