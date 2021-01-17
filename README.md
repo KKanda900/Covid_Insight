@@ -23,7 +23,7 @@ I built this project using Python, python libraries and Machine Learning (specif
   6. Twilio
 
 ## Challenges I ran into 🚧
-A major challenge I ran into when creating this project was learning about Machine Learning models and which one would be the best to measure the predictions for future cases in n amount of days.
+A major challenge I ran into when creating this project was learning about Machine Learning models and which one would be the best to measure the predictions for future cases in **n** amount of days.
 
 ## Accomplishments that I'm proud of 😄
 I am proud to say I learned some aspects of Machine Learning that I didn't learn before and be confident enough to apply it to other projects in the future where applicable. 🎓
