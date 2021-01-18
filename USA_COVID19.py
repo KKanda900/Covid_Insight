@@ -7,10 +7,6 @@ import datetime as dt
 import data as d
 import os
 
-'''
-1/16/20 -> work on making more prediction graphs
-'''
-
 def cases_prediction(state, days): # takes in argument for the number of days in future that theres going to be a increase
     d.update()
     pathname = d.find_file(state)
