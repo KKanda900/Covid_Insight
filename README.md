@@ -18,7 +18,7 @@ I built this project using Python, python libraries and Machine Learning (specif
   1. numpy
   2. matplotlib
   3. pandas
-  4. sklearn (using their Machine Learning Linear Regression model)
+  4. sklearn
   5. Flask
   6. Twilio
 
