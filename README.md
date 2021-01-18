@@ -1,7 +1,7 @@
 # Covid-19 Insight 🦠
 
 ## Inspiration 🤔
-My main insipiration for this project was so people can stay up to date with the rise of COVID-19 in America through text messages instead of an application that would take up space in their phone. 
+My main inspiration for this project was so people can stay up to date with the rise of COVID-19 in America through text messages instead of an application that would take up space in their phone. 
 
 ## What it does ⚙️
 Covid Insight is an application that has the incentive to keep people up to date with latest corona virus cases in America via text that communicates with a flask server application giving the apporiate responses based on the user.
