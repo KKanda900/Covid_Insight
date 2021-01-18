@@ -1,4 +1,4 @@
-# Covid Insight 🦠
+# Covid-19 Insight 🦠
 
 ## Inspiration 🤔
 My main insipiration for this project was so people can stay up to date with the rise of COVID-19 in America through text messages instead of an application that would take up space in their phone. 
