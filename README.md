@@ -4,7 +4,7 @@
 My main inspiration for this project was so people can stay up to date with the rise of COVID-19 in America through text messages instead of an application that would take up space in their phone. 
 
 ## What it does ⚙️
-Covid Insight is an application that has the incentive to keep people up to date with latest corona virus cases in America via text that communicates with a flask server application giving the apporiate responses based on the user.
+Covid Insight is an application that has the incentive to keep people up to date with latest corona virus cases in America via text that communicates with a flask server application giving the information that the user requested from case prediction in **n** days, the latest cases for the day and growth rate of the positive cases.
 
 ## How to use it 🗒️
 To use Covid Insight, follow these steps:
