@@ -1,7 +1,7 @@
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
 import USA_COVID19 as c19
-import data as d
+import Data as d
 import os
 
 app = Flask(__name__)
@@ -37,7 +37,7 @@ def sms():
         resp.message(roc)
         return str(resp)
     elif tokens[0] == 'prediction' and tokens[1].isnumeric() and check_valid_input(tokens[2]) == True:
-        cases = c19.cases_prediction(tokens[2], tokens[1])
+        cases = c19.bayesian_prediction(tokens[2], tokens[1])
         resp.message(cases)
         return str(resp)
 

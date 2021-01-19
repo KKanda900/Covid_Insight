@@ -3,11 +3,31 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import BayesianRidge
+from sklearn.linear_model import Ridge
 import datetime as dt
-import data as d
+import Data as d
 import os
 
-def cases_prediction(state, days): # takes in argument for the number of days in future that theres going to be a increase
+def bayesian_prediction(state, days): # takes in argument for the number of days in future that theres going to be a increase
+    d.update()
+    pathname = d.find_file(state)
+    dataset = pd.read_csv(pathname)
+    dataset['date'] = pd.to_datetime(dataset['date'])
+    dataset['date_f'] = (dataset['date'] - dataset['date'].min())  / np.timedelta64(1,'D')
+
+    X = dataset[['date_f']]
+    y = dataset[['cases']]
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=1/3, random_state=0)
+
+    regressor = BayesianRidge()
+    regressor.fit(X_train, y_train)
+    X_prediction_array = X[-days:] # sample in the next 5 days
+    y_pred = regressor.predict(X_prediction_array)
+    return 'Using the Bayesian Model: In the next {} days in {}, these will be the positive cases {}'.format(days, state, y_pred)
+
+def linear_prediction(state, days):
     d.update()
     pathname = d.find_file(state)
     dataset = pd.read_csv(pathname)
@@ -23,7 +43,25 @@ def cases_prediction(state, days): # takes in argument for the number of days in
     regressor.fit(X_train, y_train)
     X_prediction_array = X[-days:] # sample in the next 5 days
     y_pred = regressor.predict(X_prediction_array)
-    return 'In the next {} days in {}, these will be the positive cases {}'.format(days, state, y_pred)
+    return 'Using the Linear Regression Model: In the next {} days in {}, these will be the positive cases {}'.format(days, state, y_pred)
+
+def ridge_prediction(state, days): # takes in argument for the number of days in future that theres going to be a increase
+    d.update()
+    pathname = d.find_file(state)
+    dataset = pd.read_csv(pathname)
+    dataset['date'] = pd.to_datetime(dataset['date'])
+    dataset['date_f'] = (dataset['date'] - dataset['date'].min())  / np.timedelta64(1,'D')
+
+    X = dataset[['date_f']]
+    y = dataset[['cases']]
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=1/3, random_state=0)
+
+    regressor = Ridge()
+    regressor.fit(X_train, y_train)
+    X_prediction_array = X[-days:] # sample in the next 5 days
+    y_pred = regressor.predict(X_prediction_array)
+    return 'Using the Ridge Model: In the next {} days in {}, these will be the positive cases {}'.format(days, state, y_pred)
 
 def get_rate_of_change(state): # takes in argument for the number of days in future that theres going to be a increase
     d.update()
@@ -37,7 +75,7 @@ def get_rate_of_change(state): # takes in argument for the number of days in fut
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=1/3, random_state=0)
 
-    regressor = LinearRegression()
+    regressor = BayesianRidge() # most accurate model prediction
     regressor.fit(X_train, y_train)
     return 'In {} the COVID-19 cases are increasing by {} daily'.format(state, regressor.intercept_)
 

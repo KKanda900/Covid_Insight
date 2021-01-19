@@ -13,8 +13,9 @@ def make_files(sort):
               'MN', 'Minnesota', 'MS', 'Mississippi', 'MO', 'Missouri', 'MT', 'Montana', 'NE', 'Nebraska', 'NV', 'Nevada', 'NH', 'New Hampshire', 'NJ', 'New Jersey', 'NM', 'New Mexico', 'NY', 'New York', 'NC', 'North Carolina',
               'ND', 'North Dakota', 'OH', 'Ohio', 'OK', 'Oklahoma', 'OR', 'Oregon', 'PA', 'Pennsylvania', 'RI', 'Rhode Island', 'SC', 'South Carolina', 'SD', 'South Dakota', 'TN', 'Tennessee',
               'TX', 'Texas', 'UT', 'Utah', 'VT', 'Vermont', 'VA', 'Virginia', 'WA', 'Washington', 'WI', 'Wisconsin', 'WY', 'Wyoming']
-    i = 0
+
     for one, two in zip(states[::2], states[1::2]):
+        i = 0
         with open('data/{}_Data.csv'.format(one), 'w') as csvfile:
             csvwriter = csv.writer(csvfile)
             for eachline in sort:
